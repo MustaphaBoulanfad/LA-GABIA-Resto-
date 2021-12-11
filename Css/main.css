@@ -153,8 +153,13 @@ header .nav-container .container {
   position: relative;
 }
 header .container .logo {
-  font-size: 23px;
-  color: #fff;
+  width: 220px;
+  height: 100%;
+}
+header .container .logo img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
 }
 header .container .showNav-mobile {
   font-size: 25px;
