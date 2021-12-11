@@ -1,0 +1,277 @@
+/* Start variables */
+:root {
+  --main-back-color: #212121;
+  --main-color: #ffb344;
+  --text-color: #f6f6f6;
+  --paragraph-color: #99a799;
+  --hover-transition: 0.4s ease;
+  --padding-section: 40px;
+  --heading-color: #393e46;
+}
+/* End variables */
+
+/* Start Header */
+header {
+  height: 70vh;
+  width: 100%;
+  position: relative;
+  background-color: var(--main-back-color);
+  background-image: url("../Images/shop-back.jpg");
+  background-size: cover;
+  background-position: center;
+}
+header .over-lay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+header .intro-text {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  user-select: none;
+  color: var(--text-color);
+  width: 100%;
+}
+header .intro-text p {
+  color: var(--text-color);
+  text-align: center;
+  margin: 0;
+}
+header .intro-text p:first-of-type {
+  font-size: 45px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1.3;
+  margin-bottom: 8px;
+}
+header .intro-text p:last-of-type {
+  font-size: 30px;
+  font-weight: 300;
+}
+/* End Header */
+
+/* Start Show */
+section.show {
+  padding: var(--padding-section) 0;
+  min-height: 100vh;
+}
+section.show .show-container {
+  display: flex;
+  flex-direction: column;
+}
+section.show .show-container .column {
+  flex: 1;
+}
+section.show .show-container .column .image img {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+/* Global Style  */
+section.show h2 {
+  margin: 0 0 20px;
+  font-size: 27px;
+  font-weight: 600;
+  color: var(--heading-color);
+  text-transform: uppercase;
+}
+section.show h3 {
+  margin: 0 0 20px;
+  font-size: 21px;
+  font-weight: 500;
+  color: var(--heading-color);
+  text-transform: uppercase;
+}
+
+section.show .show-container .column .direction ul li {
+  margin: 15px 0;
+  padding-left: 60px;
+  font-size: 15px;
+  line-height: 1.3;
+  font-weight: 400;
+  color: var(--paragraph-color);
+  position: relative;
+}
+section.show .show-container .column .direction ul li::before {
+  content: attr(data-pseudo);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 35px;
+  height: 35px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 35px;
+  color: #fff;
+  font-size: 19px;
+}
+section.show .show-container .column .suggest {
+  padding: 0 0 15px;
+  border-bottom: 1px solid var(--main-color);
+}
+section.show .show-container .column .suggest p {
+  margin: 15px 0;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--paragraph-color);
+  line-height: 1.3;
+}
+
+section.show .show-container .column .ingredients {
+  padding: 20px 0 20px 15px;
+  background-color: #f2f2f2;
+}
+section.show .show-container .column .ingredients ul li {
+  color: var(--main-back-color);
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+section.show .show-container .column .ingredients ul li i {
+  margin-right: 20px;
+  color: var(--main-color);
+}
+
+section.show .show-container .column .descriptions {
+  margin-top: 25px;
+}
+section.show .show-container .column .descriptions p {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--paragraph-color);
+  line-height: 1.3;
+}
+
+section.show .show-container .column .nutrition {
+  margin-top: 25px;
+}
+section.show .show-container .column .nutrition table {
+  width: 100%;
+  text-align: left;
+  font-size: 16px;
+}
+section.show .show-container .column .nutrition table th {
+  color: var(--heading-color);
+}
+section.show .show-container .column .nutrition table tr td {
+  padding: 8px 0;
+  color: var(--paragraph-color);
+  font-size: 14px;
+  font-weight: 400;
+  width: 25%;
+}
+section.show .show-container .column .nutrition table tr td:last-of-type {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+section.show .column .nutrition table td:last-of-type span.progress {
+  display: block;
+  width: 85%;
+  height: 2px;
+  background-color: #ccc;
+  margin-left: 7px;
+}
+section.show .column .nutrition table td:last-of-type span.much {
+  display: block;
+  height: 2px;
+  background-color: var(--main-color);
+}
+@media screen and (min-width: 992px) {
+  section.show .show-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  section.show .show-container .column {
+    padding: 0 20px;
+  }
+}
+
+/*Featured*/
+section.show .featured {
+  margin-top: 100px;
+  padding: var(--padding-section) 0;
+  border-top: 1px solid #ccc;
+}
+section.show .featured .recipe-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+section.show .featured .recipe-container .holder {
+  width: 600%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  transition: var(--hover-transition);
+}
+section.show .featured .holder a {
+  width: 100%;
+  height: auto;
+}
+@media screen and (min-width: 576px) {
+  section.show .featured .recipe-container .holder {
+    width: 300%;
+  }
+  section.show .featured .holder a {
+    margin: 0 10px;
+  }
+}
+@media screen and (min-width: 992px) {
+  section.show .featured .recipe-container .holder {
+    width: 150%;
+  }
+}
+section.show .featured img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+}
+section.show .featured h3 {
+  margin: 8px 0;
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--heading-color);
+  text-transform: uppercase;
+}
+section.show .featured .rating > i {
+  color: #ccc;
+  font-size: 15px;
+  margin: 5px 0;
+}
+section.show .featured .navigation {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+section.show .featured .navigation ul li {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: var(--hover-transition);
+  display: none;
+  margin: 0 2.5px;
+}
+section.show .featured .navigation ul li.show {
+  display: inline-block;
+}
+section.show .featured .navigation ul li.active {
+  background-color: var(--main-color);
+}
+/* End Show */

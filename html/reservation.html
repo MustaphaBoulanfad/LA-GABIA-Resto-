@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Css/all.min.css" />
+    <link rel="stylesheet" href="../Css/normalize.css" />
+    <link rel="stylesheet" href="../Css/main.css" />
+    <link rel="stylesheet" href="../Css/reservation.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>LA GABIA | Restaurant - Coffee</title>
+  </head>
+  <body>
+    <!-- Start Header -->
+    <header>
+      <div class="over-lay"></div>
+      <div class="nav-container">
+        <div class="container">
+          <div class="logo">LOGO</div>
+          <i class="fas fa-bars showNav-mobile"></i>
+          <div class="nav-mobile">
+            <nav>
+              <a href="../home.html">Home</a>
+              <a href="../html/menu.html">Menu</a>
+              <a href="#" class="active">Reservation</a>
+              <a href="about.html">About</a>
+              <a href="gallery.html">Gallery</a>
+              <a href="shop.html">Shop</a>
+              <a href="contact.html">Contact</a>
+            </nav>
+            <div class="shop-card">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="count">2</span>
+              <i class="fas fa-sort-down"></i>
+              <div class="card">
+                <h3>Shopping cart</h3>
+                <div class="card-item">
+                  <img src="../Images/menu-pasta.jpg" alt="" />
+                  <div class="info">
+                    <h4>Pasta</h4>
+                    <span>14.95 x 2</span>
+                  </div>
+                  <span><i class="fa fa-times ci-close"></i></span>
+                </div>
+                <div class="card-item">
+                  <img src="../Images/menu-chicken.jpg" alt="" />
+                  <div class="info">
+                    <h4>LEMON CHICKEN</h4>
+                    <span>14.95 x 1</span>
+                  </div>
+                  <span><i class="fa fa-times ci-close"></i></span>
+                </div>
+                <div class="footer">
+                  <span class="total">$44.85</span>
+                  <button class="primary">
+                    <a href="view_cart.html">View Cart</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="intro-text">
+        <p>reservation</p>
+        <p>Reservation Form Powered by Open Table.</p>
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Reservation -->
+    <section class="reservation">
+      <div class="special-heading-light">
+        <h1>Reservations</h1>
+        <p>Book a table online. Leads will reach in your email.</p>
+      </div>
+      <div class="container">
+        <form class="book">
+          <div>
+            <label for="date">Date</label>
+            <input
+              type="text"
+              name="Date"
+              id="date"
+              class="datePicker"
+              placeholder="dd/mm/YYYY"
+            />
+            <i class="far fa-calendar"></i>
+          </div>
+          <div>
+            <label for="name">Your Name</label>
+            <input type="text" name="name" id="name" placeholder="Full Name" />
+            <i class="fas fa-user-alt"></i>
+          </div>
+          <div>
+            <label for="time">Time</label>
+            <input
+              type="text"
+              name="time"
+              id="time"
+              class="timePicker"
+              placeholder="HH:MM pm/am"
+            />
+            <i class="far fa-clock"></i>
+          </div>
+          <div>
+            <label for="email">Email Address</label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="Your Email"
+            />
+            <i class="far fa-envelope"></i>
+          </div>
+          <div>
+            <label for="guests">Guests</label>
+            <input
+              type="number"
+              name="guests"
+              id="guests"
+              placeholder="How Many of You?"
+            />
+            <i class="fas fa-users"></i>
+          </div>
+          <div>
+            <label for="phone">Phone Number</label>
+            <input
+              type="number"
+              name="phone"
+              id="phone"
+              placeholder="Your Phone"
+            />
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <input type="submit" value="Make reservation" class="reserve" />
+        </form>
+        <p class="info">
+          You can also call <span>(123) 456-7890</span> to make a reservation
+        </p>
+      </div>
+    </section>
+    <!-- End Reservation -->
+
+    <!-- Start Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-container">
+          <div class="aboutUs">
+            <h2>About us</h2>
+            <p>
+              Duis leo justo, condimentum at purus eu,Aenean sed dolor sem.
+              Etiam massa libero, auctor vitae egestas et, accumsan quis
+              nunc.Duis leo justo, condimentum at purus eu, posuere pretium
+              tellus.
+            </p>
+            <a href="#">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="recent">
+            <h2>Recent Post</h2>
+            <a href="#">
+              <div class="post">
+                <div class="image">
+                  <img src="../Images/food-01.jpg" alt="" />
+                </div>
+                <div class="details">
+                  <p>Hand picked ingredients for our best customers</p>
+                  <span>29 May 2020</span>
+                </div>
+              </div>
+            </a>
+            <a href="#">
+              <div class="post">
+                <div class="image">
+                  <img src="../Images/header-01.jpg" alt="" />
+                </div>
+                <div class="details">
+                  <p>Daily special foods that you will going to love</p>
+                  <span>14 october 2020</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="reach">
+            <h2>Reach Us</h2>
+            <div class="icons">
+              <i class="fab fa-facebook-square"></i>
+              <i class="fab fa-twitter-square"></i>
+              <i class="fab fa-google-plus"></i>
+              <i class="fab fa-youtube"></i>
+              <i class="fab fa-pinterest-square"></i>
+              <i class="fab fa-instagram-square"></i>
+            </div>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> 28 Seventh Avenue, Neew
+              York, 10014
+            </p>
+            <p><i class="fas fa-phone-alt"></i>(123) 456-7890</p>
+            <p><i class="far fa-envelope"></i>support@restaurant.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="copy">
+        <p>
+          &copy;Template From
+          <a
+            href="https://demo.web3canvas.com/themeforest/tomato/index_slider.html"
+            >web3canvas</a
+          >
+        </p>
+        <p>
+          ReCreated with &hearts; by
+          <a
+            href="https://mustaphaboulanfad.github.io/Portfolio/index.html#home"
+            >Mustapha Boulanfad</a
+          >
+        </p>
+      </div>
+    </footer>
+    <!-- End Footer -->
+    <script type="text/javascript" src="../Js/main.js"></script>
+    <script type="text/javascript" src="../Js/reservation.js"></script>
+  </body>
+</html>

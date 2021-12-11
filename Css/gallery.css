@@ -1,0 +1,209 @@
+/* Start variables */
+:root {
+  --main-back-color: #212121;
+  --main-color: #ffb344;
+  --text-color: #f6f6f6;
+  --paragraph-color: #99a799;
+  --hover-transition: 0.4s ease;
+  --padding-section: 40px;
+  --heading-color: #393e46;
+}
+/* End variables */
+
+/* Start Header */
+header {
+  height: 70vh;
+  width: 100%;
+  background-color: var(--main-back-color);
+  background-image: url("../Images/gallery-back.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+header .over-lay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+header .intro-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  user-select: none;
+  color: var(--text-color);
+  width: 100%;
+  user-select: none;
+}
+header .intro-text p {
+  color: var(--text-color);
+  text-align: center;
+  margin: 0;
+}
+header .intro-text p:first-of-type {
+  font-size: 45px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1.3;
+  margin-bottom: 8px;
+}
+header .intro-text p:last-of-type {
+  font-size: 30px;
+  font-weight: 300;
+}
+/* End Header */
+
+/* Start Showing */
+.show {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  z-index: -1;
+  transition: var(--hover-transition);
+}
+.show .content {
+  position: relative;
+  width: 90%;
+  height: 60%;
+}
+.show .content span {
+  color: #fff;
+  position: absolute;
+}
+.show .content span:not(.count) {
+  font-size: 22px;
+  top: -30px;
+  right: 0;
+  cursor: pointer;
+  transition: color var(--hover-transition);
+}
+.show .content span:hover {
+  color: var(--main-color);
+}
+.show .content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.show .content span.count {
+  bottom: -30px;
+  right: 0;
+  font-size: 17px;
+  font-weight: 400;
+  user-select: none;
+}
+.show .content > i {
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: color var(--hover-transition);
+}
+.show .content > i:hover {
+  color: var(--main-color);
+}
+.show .content > i.stop {
+  opacity: 0.7;
+  cursor: no-drop;
+}
+.show .content > i.left {
+  left: 20px;
+}
+.show .content > i.right {
+  right: 20px;
+}
+@media screen and (min-width: 599px) {
+  .show .content {
+    width: 90%;
+    height: 70%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .show .content {
+    width: 70%;
+    height: 80%;
+  }
+}
+/* End Showing */
+
+/* Start Show-Images  */
+section.show-images {
+  min-height: 50vh;
+  width: 100%;
+  padding: var(--padding-section) 0;
+}
+section.show-images .images {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+section.show-images .image {
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+}
+section.show-images .image img {
+  width: 100%;
+  height: 250px;
+  height: 100%;
+  object-fit: cover;
+}
+section.show-images .image .find {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: var(--hover-transition);
+  cursor: pointer;
+}
+section.show-images .image:hover .find {
+  opacity: 1;
+  z-index: 3;
+}
+section.show-images .image .find i {
+  color: var(--text-color);
+  font-size: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+@media screen and (min-width: 768px) {
+  section.show-images .images {
+    grid-template-columns: 1fr 1fr;
+  }
+  section.show-images .image {
+    height: 260px;
+  }
+}
+@media screen and (min-width: 992px) {
+  section.show-images .images {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* End Show-Images  */

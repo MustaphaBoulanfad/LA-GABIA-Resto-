@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Css/all.min.css" />
+    <link rel="stylesheet" href="../Css/normalize.css" />
+    <link rel="stylesheet" href="../Css/main.css" />
+    <link rel="stylesheet" href="../Css/checkout.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>LA GABIA | Restaurant - Coffee</title>
+  </head>
+  <body>
+    <!-- Start Header -->
+    <header>
+      <div class="over-lay"></div>
+      <div class="nav-container">
+        <div class="container">
+          <div class="logo">LOGO</div>
+          <i class="fas fa-bars showNav-mobile"></i>
+          <div class="nav-mobile">
+            <nav>
+              <a href="../home.html">Home</a>
+              <a href="menu.html">Menu</a>
+              <a href="reservation.html">Reservation</a>
+              <a href="#">About</a>
+              <a href="gallery.html">Gallery</a>
+              <a href="shop.html"  class="active">Shop</a>
+              <a href="contact.html">Contact</a>
+            </nav>
+            <div class="shop-card">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="count">2</span>
+              <i class="fas fa-sort-down"></i>
+              <div class="card">
+                <h3>Shopping cart</h3>
+                <div class="card-item">
+                  <img src="../Images/menu-pasta.jpg" alt="" />
+                  <div class="info">
+                    <h4>Pasta</h4>
+                    <span>14.95 x 2</span>
+                  </div>
+                  <span><i class="fa fa-times ci-close"></i></span>
+                </div>
+                <div class="card-item">
+                  <img src="../Images/menu-chicken.jpg" alt="" />
+                  <div class="info">
+                    <h4>LEMON CHICKEN</h4>
+                    <span>14.95 x 1</span>
+                  </div>
+                  <span><i class="fa fa-times ci-close"></i></span>
+                </div>
+                  <div class="footer">
+                    <span class="total">$44.85</span>
+                    <button class="primary">
+                      <a href="view_cart.html">View Cart</a>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="intro-text">
+        <p>Check Out</p>
+        <p>Enter your address and get these items in your doorstep.</p>
+      </div>
+    </header>
+    <!-- End Header -->
+    <!-- Start Check -->
+    <section class="check">
+      <div class="container">
+        <div class="check-container">
+          <div class="row">
+            <h3>Billing Details</h3>
+            <form action="">
+
+              <div class="items">
+                <div class="item">
+                  <label for="country">Country</label>
+                  <select id = "country">
+                    <option value="">Select Country</option>
+                    <option value="AX">Aland Islands</option>
+                    <option value="AF">Afghanistan</option>
+                    <option value="AL">Albania</option>
+                    <option value="DZ">Algeria</option>
+                    <option value="AD">Andorra</option>
+                    <option value="AO">Angola</option>
+                    <option value="AI">Anguilla</option>
+                    <option value="AQ">Antarctica</option>
+                    <option value="AG">Antigua and Barbuda</option>
+                    <option value="AR">Argentina</option>
+                    <option value="AM">Armenia</option>
+                    <option value="AW">Aruba</option>
+                    <option value="AU">Australia</option>
+                    <option value="AT">Austria</option>
+                    <option value="AZ">Azerbaijan</option>
+                    <option value="BS">Bahamas</option>
+                    <option value="BH">Bahrain</option>
+                    <option value="BD">Bangladesh</option>
+                    <option value="BB">Barbados</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="items">
+                <div class="item col-2">
+                  <label for="fName">First Name</label>
+                  <input type="text" name="fName" id="fName">
+                </div>
+
+                <div class="item col-2">
+                  <label for="lName">Last Name</label>
+                  <input type="text" name="lName" id="lName">
+                </div>
+              </div>
+
+              <div class="items">
+                <div class="item">
+                  <label for="company">Company Name</label>
+                  <input type="text" name="company" id="company">
+                </div>
+              </div>
+
+              <div class="items">
+                <div class="item">
+                  <label for="address">Address</label>
+                  <input type="text" name="address" id="address" placeholder="Street Address">
+                  <input type="text" name="" id="" placeholder="Apartment, suite, unit etc (optional)">
+                </div>
+              </div>
+
+              <div class="items">
+                <div class="item col-3">
+                  <label for="town">Town / City</label>
+                  <input type="text" name="town" id="town">
+                </div>
+                <div class="item col-3">
+                  <label for="country">Country</label>
+                  <input type="text" name="country" id="country">
+                </div>
+                <div class="item col-3">
+                  <label for="postCode">PostCode</label>
+                  <input type="text" name="postCode" id="postCode">
+                </div>
+              </div>
+
+              <div class="items">
+                <div class="item">
+                  <label for="email">Address Email</label>
+                  <input type="email" name="email" id="email">
+                </div>
+              </div>
+
+              <div class="items">
+                <div class="item">
+                  <label for="phone">Phone Number</label>
+                  <input type="number" name="phone" id="v">
+                </div>
+              </div>
+
+            </form>
+          </div>
+          <div class="row">
+            <h3>Ship to a different address?</h3>
+            <form action="">
+              <div class="items">
+                <div class="item">
+                  <label for="country">Country</label>
+                  <select id = "country">
+                    <option value="">Select Country</option>
+                    <option value="AX">Aland Islands</option>
+                    <option value="AF">Afghanistan</option>
+                    <option value="AL">Albania</option>
+                    <option value="DZ">Algeria</option>
+                    <option value="AD">Andorra</option>
+                    <option value="AO">Angola</option>
+                    <option value="AI">Anguilla</option>
+                    <option value="AQ">Antarctica</option>
+                    <option value="AG">Antigua and Barbuda</option>
+                    <option value="AR">Argentina</option>
+                    <option value="AM">Armenia</option>
+                    <option value="AW">Aruba</option>
+                    <option value="AU">Australia</option>
+                    <option value="AT">Austria</option>
+                    <option value="AZ">Azerbaijan</option>
+                    <option value="BS">Bahamas</option>
+                    <option value="BH">Bahrain</option>
+                    <option value="BD">Bangladesh</option>
+                    <option value="BB">Barbados</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="items">
+                <div class="item col-2">
+                  <label for="fName">First Name</label>
+                  <input type="text" name="fName" id="fName">
+                </div>
+                <div class="item col-2">
+                  <label for="lName">Last Name</label>
+                  <input type="text" name="lName" id="lName">
+                </div>
+              </div>
+
+              <div class="items">
+                <div class="item">
+                  <label for="company">Company Name</label>
+                  <input type="text" name="company" id="company">
+                </div>
+              </div>
+
+              <div class="items">
+                <div class="item">
+                  <label for="address">Address</label>
+                  <input type="text" name="address" id="address" placeholder="Street Address">
+                  <input type="text" name="" id="" placeholder="Apartment, suite, unit etc (optional)">
+                </div>
+              </div>
+
+              <div class="items">
+                <div class="item col-3">
+                  <label for="town">Town / City</label>
+                  <input type="text" name="town" id="town">
+                </div>
+                <div class="item col-3">
+                  <label for="country">Country</label>
+                  <input type="text" name="country" id="country">
+                </div>
+                <div class="item col-3">
+                  <label for="postCode">PostCode</label>
+                  <input type="text" name="postCode" id="postCode">
+                </div>
+              </div>
+
+              <div class="items">
+                <div class="item">
+                  <label for="note">Order Notes</label>
+                  <textarea name="note" id="note" placeholder="Notes for your order, e.g special notes for delivery"></textarea>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="order">
+          <h3>Your Order</h3>
+          <table>
+            <tbody>
+            <tr>
+              <th>Cart Subtotal</th>
+              <td>$44.85</td>
+            </tr>
+            <tr>
+              <th>Shipping and handling</th>
+              <td>Free Shipping</td>
+            </tr>
+            <tr>
+              <th>Order Total</th>
+              <td><span class ="total">$44.85</span></td>
+            </tr>
+          </tbody>
+          </table>
+        </div>
+        <div class="payment">
+          <h3>Payment method</h3>
+          <div class="payment-container">
+            <div class="row">
+              <label>
+                <input type="radio" name="payment" id="radio1">
+                <span>Direct Bank Transfer</span>
+              </label>
+              <p>Make payment directly into our bank account and use your Order ID as the reference</p>
+            </div>
+            <div class="row">
+              <label>
+                <input type="radio" name="payment" id="radio2">
+                <span>Cheque payment</span>
+              </label>
+              <p>Please send your cheque to BLVCK Fashion House, Oatland Rood, UK, LS71JR</p>
+            </div>
+            <div class="row">
+              <label>
+                <input type="radio" name="payment" id="radio3">
+                <span>paypal</span>
+              </label>
+              <p>Pay via PayPal; you can pay with your credit card if you don't have a PayPal account</p>
+            </div>
+          </div>
+          <div class="terms">
+            <input type="checkbox" name="checkboxtemrs" id="checkboxtemrs">
+            <span>I've read and accept the <a href = "about.html">terms & conditions</a></span>
+          </div>
+          <div class="pay">
+            <button class ="primary">Pay now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Check -->
+        <!-- Start Footer -->
+        <footer>
+          <div class="container">
+            <div class="footer-container">
+              <div class="aboutUs">
+                <h2>About us</h2>
+                <p>
+                  Duis leo justo, condimentum at purus eu,Aenean sed dolor sem.
+                  Etiam massa libero, auctor vitae egestas et, accumsan quis
+                  nunc.Duis leo justo, condimentum at purus eu, posuere pretium
+                  tellus.
+                </p>
+                <a href="#">Read More <i class="fas fa-arrow-right"></i></a>
+              </div>
+              <div class="recent">
+                <h2>Recent Post</h2>
+                <a href="#">
+                  <div class="post">
+                    <div class="image">
+                      <img src="../Images/food-01.jpg" alt="" />
+                    </div>
+                    <div class="details">
+                      <p>Hand picked ingredients for our best customers</p>
+                      <span>29 May 2020</span>
+                    </div>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="post">
+                    <div class="image">
+                      <img src="../Images/header-01.jpg" alt="" />
+                    </div>
+                    <div class="details">
+                      <p>Daily special foods that you will going to love</p>
+                      <span>14 october 2020</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="reach">
+                <h2>Reach Us</h2>
+                <div class="icons">
+                  <i class="fab fa-facebook-square"></i>
+                  <i class="fab fa-twitter-square"></i>
+                  <i class="fab fa-google-plus"></i>
+                  <i class="fab fa-youtube"></i>
+                  <i class="fab fa-pinterest-square"></i>
+                  <i class="fab fa-instagram-square"></i>
+                </div>
+                <p>
+                  <i class="fas fa-map-marker-alt"></i> 28 Seventh Avenue, Neew
+                  York, 10014
+                </p>
+                <p><i class="fas fa-phone-alt"></i>(123) 456-7890</p>
+                <p><i class="far fa-envelope"></i>support@restaurant.com</p>
+              </div>
+            </div>
+          </div>
+          <div class="copy">
+            <p>
+              &copy;Template From
+              <a
+                href="https://demo.web3canvas.com/themeforest/tomato/index_slider.html"
+                >web3canvas</a
+              >
+            </p>
+            <p>
+              ReCreated with &hearts; by
+              <a
+                href="https://mustaphaboulanfad.github.io/Portfolio/index.html#home"
+                >Mustapha Boulanfad</a
+              >
+            </p>
+          </div>
+        </footer>
+        <!-- End Footer -->    
+    <body>
+        <script type= "text/javascript" src = "../Js/main.js"></script>
+        <script type= "text/javascript" src = "../Js/checkout.js"></script>
+    </body>

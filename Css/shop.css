@@ -1,0 +1,282 @@
+/* Start variables */
+:root {
+  --main-back-color: #212121;
+  --main-color: #ffb344;
+  --text-color: #f6f6f6;
+  --paragraph-color: #99a799;
+  --hover-transition: 0.4s ease;
+  --padding-section: 40px;
+  --heading-color: #393e46;
+}
+/* End variables */
+
+/* Start Header */
+header {
+  height: 70vh;
+  width: 100%;
+  position: relative;
+  background-color: var(--main-back-color);
+  background-image: url("../Images/shop-back.jpg");
+  background-size: cover;
+  background-position: center;
+}
+header .over-lay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+header .intro-text {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  user-select: none;
+  color: var(--text-color);
+  width: 100%;
+}
+header .intro-text p {
+  color: var(--text-color);
+  text-align: center;
+  margin: 0;
+}
+header .intro-text p:first-of-type {
+  font-size: 45px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1.3;
+  margin-bottom: 8px;
+}
+header .intro-text p:last-of-type {
+  font-size: 30px;
+  font-weight: 300;
+}
+/* End Header */
+
+/* Start Shop */
+section.shop {
+  min-height: 100vh;
+  padding: var(--padding-section) 0;
+}
+section.shop .shop-container {
+  display: flex;
+  flex-direction: column;
+}
+section.shop .side-bar {
+  flex: 1;
+}
+section.shop .side-bar h3 {
+  text-transform: uppercase;
+  color: var(--heading-color);
+  font-weight: 600;
+}
+section.shop .side-bar .our-food ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section.shop .side-bar .our-food ul li:hover > * {
+  color: var(--main-color);
+}
+section.shop .side-bar .our-food ul li a {
+  transition: var(--hover-transition);
+  display: block;
+  width: 100%;
+  color: var(--main-back-color);
+  padding: 10px 0;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+}
+section.shop .side-bar .our-food ul li i {
+  font-size: 19px;
+  transition: var(--hover-transition);
+}
+
+section.shop .side-bar .new-arrival .new {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+section.shop .side-bar .new-arrival .new img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 25px;
+}
+section.shop .side-bar .new-arrival .new .info h4 {
+  margin: 5px 0;
+  font-size: 18px;
+  color: var(--heading-color);
+  font-weight: 700;
+  letter-spacing: 1.1;
+}
+section.shop .side-bar .new-arrival .new .info .rating > i {
+  color: #ccc;
+  font-size: 15px;
+  margin: 5px 0;
+}
+section.shop .side-bar .new-arrival .new .info span.price {
+  display: block;
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--heading-color);
+  margin: 5px 0;
+}
+
+section.shop .food .header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+section.shop .food .header select {
+  width: 70%;
+  height: 35px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  color: var(--paragraph-color);
+  outline: none;
+}
+section.shop .food .header .vue span:not(span.result) {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 6px;
+}
+section.shop .food .header .vue {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section.shop .food .header .vue span:not(span.result) i {
+  color: #ccc;
+}
+section.shop .food .header .vue span.result {
+  font-size: 15px;
+  font-weight: 400;
+}
+section.shop .food .food-cards {
+  display: flex;
+  flex-direction: column;
+}
+section.shop .food .food-cards .card {
+  width: 100%;
+  min-height: 250px;
+  margin-bottom: 30px;
+}
+section.shop .food .food-cards .card img {
+  width: 70%;
+  height: 300px;
+  margin: 15px 15%;
+  object-fit: cover;
+}
+section.shop .food .food-cards .card .info {
+  text-align: center;
+}
+section.shop .food .food-cards .card .info h3 {
+  margin: 0;
+  font-size: 27px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--heading-color);
+}
+section.shop .food .food-cards .card .info h3 a {
+  cursor: pointer;
+  transition: var(--hover-transition);
+}
+section.shop .food .food-cards .card .info h3 a:hover {
+  color: var(--main-color);
+}
+section.shop .food .food-cards .card .info .rating > i {
+  color: #ccc;
+  font-size: 15px;
+  margin: 5px 0;
+}
+section.shop .food .food-cards .card .info .price {
+  display: block;
+  margin: 7px 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+section.shop .food .food-cards .card .action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+section.shop .food .food-cards .card .action a {
+  color: var(--heading-color);
+  font-size: 17px;
+  cursor: pointer;
+  transition: var(--hover-transition);
+}
+section.shop .food .food-cards .card .action a:hover {
+  color: var(--main-color);
+}
+section.shop .food .food-cards .card .action a i {
+  margin-right: 7px;
+}
+section.shop .food > .action {
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 599px) {
+  section.shop .side-bar {
+    flex: 1;
+  }
+  section.shop .food {
+    margin-left: 25px;
+    flex: 3;
+  }
+  section.shop .food .header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  section.shop .food .header select {
+    width: 30%;
+    margin: 0 10px 0 0;
+  }
+  section.shop .food .header .vue {
+    width: 70%;
+  }
+  section.shop .food .food-cards {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  section.shop .food .food-cards .card {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 992px) {
+  section.shop .shop-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  section.shop .food .food-cards .card {
+    width: 30%;
+    margin: 20px 0;
+  }
+  section.shop .food .food-cards .card img {
+    width: 100%;
+    height: 200px;
+    margin: 0;
+  }
+}
+/* End Shop */

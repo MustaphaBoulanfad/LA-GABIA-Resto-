@@ -1,0 +1,410 @@
+/* Start variables */
+:root {
+  --main-back-color: #212121;
+  --main-color: #ffb344;
+  --text-color: #f6f6f6;
+  --paragraph-color: #99a799;
+  --hover-transition: 0.4s ease;
+  --padding-section: 40px;
+  --heading-color: #393e46;
+}
+/* End variables */
+
+/* Start Header */
+header {
+  height: 70vh;
+  position: relative;
+  background-color: var(--main-back-color);
+  background-image: url("../Images/about-header-back.jpg");
+  background-size: cover;
+  background-position: center;
+}
+header .over-lay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+}
+header .intro-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 4;
+  user-select: none;
+  color: var(--text-color);
+  width: 100%;
+}
+header .intro-text p {
+  color: var(--text-color);
+  text-align: center;
+  margin: 0;
+}
+header .intro-text p:first-of-type {
+  font-size: 45px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1.3;
+  margin-bottom: 8px;
+}
+header .intro-text p:last-of-type {
+  font-size: 30px;
+  font-weight: 300;
+}
+/* End Header */
+
+/* Start About */
+.about {
+  min-height: 50vh;
+  padding: var(--padding-section) 0;
+}
+.about .about-container {
+  display: flex;
+  flex-direction: column;
+}
+.about .about-container .image img {
+  width: 100%;
+}
+.about .about-container .story {
+  text-align: center;
+}
+.about .about-container .story h2 {
+  color: var(--heading-color);
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 35px;
+}
+.about .about-container .story p {
+  color: var(--paragraph-color);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+@media screen and (min-width: 992px) {
+  .about .about-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .about .about-container .image,
+  .about .about-container .story {
+    flex: 1;
+  }
+}
+/* End About */
+
+/* Start Special Service */
+.special-service {
+  min-height: 50vh;
+  padding: var(--padding-section) 0;
+  background-color: var(--main-back-color);
+}
+.special-service .service-container {
+  padding: 70px 0;
+  width: 100%;
+  min-height: 380px;
+  position: relative;
+  overflow: hidden;
+}
+.special-service .service-container .holder {
+  width: 200%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: left var(--hover-transition);
+}
+.special-service .service-container .holder.active {
+  cursor: grabbing;
+}
+.special-service .service-container .holder .service {
+  width: 50%;
+  height: 100%;
+  padding: 20px 5%;
+  text-align: center;
+  user-select: none;
+}
+.special-service .service-container .holder .service h2 {
+  font-size: 34px;
+  color: var(--text-color);
+  font-weight: 500;
+  margin: 20px 0;
+  text-transform: uppercase;
+}
+.special-service .service-container .holder .service p {
+  color: var(--paragraph-color);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.7;
+  width: 80%;
+  margin: 0 auto;
+}
+.special-service .service-container .navigation {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.special-service .service-container .navigation ul {
+  display: flex;
+  margin: 15px 0;
+}
+.special-service .service-container .navigation ul li {
+  width: 16px;
+  height: 16px;
+  margin: 0 5px;
+  border-radius: 50%;
+  border: 2px solid var(--main-color);
+  transition: background-color var(--hover-transition);
+  cursor: pointer;
+}
+.special-service .service-container .navigation ul li.active {
+  background-color: var(--main-color);
+}
+@media screen and (min-width: 768px) {
+  .special-service .service-container .holder {
+    width: 100%;
+    left: 0 !important;
+  }
+  .special-service .service-container .navigation {
+    display: none;
+  }
+}
+/* End Special Service */
+
+/* Start Teams */
+.teams {
+  min-height: 50vh;
+  padding: var(--padding-section) 0;
+}
+.teams .teams-member {
+  display: flex;
+  flex-direction: column;
+}
+.teams .teams-member .member {
+  text-align: center;
+  width: 100%;
+  margin-top: 30px;
+}
+.teams .teams-member .member .info h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 5px 0;
+  color: var(--heading-color);
+}
+.teams .teams-member .member .info p {
+  color: var(--paragraph-color);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin: 0 0 15px;
+}
+.teams .teams-member .member .social i {
+  margin: 0 2.5px;
+  cursor: pointer;
+  transition: color var(--hover-transition);
+}
+.teams .teams-member .member .social i:hover {
+  color: var(--main-color);
+}
+@media screen and (min-width: 592px) {
+  .teams .teams-member {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .teams .teams-member .member {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .teams .teams-member .member {
+    width: 20%;
+  }
+  .teams .teams-member .member img {
+    width: 200px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .teams .teams-member .member img {
+    width: 100%;
+  }
+}
+/* End Teams */
+
+/* Start Quotes   */
+.quotes {
+  min-height: 90vh;
+  padding: var(--padding-section) 0;
+  background-image: url("../Images/quotes-back.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.quotes .over-lay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.quotes .container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+}
+.quotes .quotes-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.quotes .quotes-container .holder {
+  width: 400%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  transition: transform 0.6s ease-in;
+}
+.quotes .quotes-container .holder .quote {
+  width: 25%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  user-select: none;
+}
+.quotes .quotes-container .holder .quote i {
+  font-size: 50px;
+  color: #fff;
+  margin-bottom: 25px;
+}
+.quotes .quotes-container .holder .quote q {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.4;
+  padding: 0 3px;
+}
+.quotes .quotes-container .holder .quote span {
+  margin-top: 30px;
+  font-size: 17px;
+  font-weight: 600;
+}
+.quotes .container .navigation {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.quotes .navigation ul {
+  display: flex;
+}
+.quotes .navigation ul li {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid var(--main-color);
+  cursor: pointer;
+  margin: 0 2.5px;
+  transition: var(--hover-transition);
+}
+.quotes .navigation ul li:hover,
+.quotes .navigation ul li.active {
+  background-color: var(--main-color);
+}
+/* End Quotes   */
+
+/* Start Menu */
+.menu {
+  padding: var(--padding-section) 0;
+  min-height: 50vh;
+}
+.menu .filter {
+  width: 100%;
+  margin-top: 35px;
+  text-align: center;
+}
+.menu .filter span {
+  margin: 0 10px;
+  padding: 7px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--paragraph-color);
+  display: inline-block;
+  transition: var(--hover-transition);
+  cursor: pointer;
+}
+.menu .filter span:hover {
+  color: var(--main-back-color);
+}
+.menu .filter span.active {
+  color: var(--heading-color);
+  border-bottom: 2px solid var(--main-color);
+}
+.menu .menu-items {
+  min-height: 200px;
+  margin: 30px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.menu .menu-items .item {
+  width: 100%;
+  margin-bottom: 25px;
+  transition: display 0.3s ease;
+}
+.menu .menu-items .item .info {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.menu .menu-items .item .info h2,
+.menu .menu-items .item .info span {
+  display: inline-block;
+  margin: 0;
+  font-size: 18px;
+  background-color: #fff;
+  font-weight: 600;
+}
+.menu .menu-items .item .info .dotted {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-top: 2px dotted #ccc;
+  width: 100%;
+  z-index: -1;
+}
+.menu .menu-items .item p {
+  color: var(--paragraph-color);
+  font-size: 16px;
+  font-weight: 500;
+  margin: 8px 0;
+}
+.menu button {
+  margin: 0 auto;
+  transition: var(--hover-transition);
+}
+.menu button:hover {
+  filter: sepia(50%);
+}
+@media screen and (min-width: 592px) {
+  .menu .menu-items .item {
+    width: 45%;
+  }
+}
+
+/* End Menu */

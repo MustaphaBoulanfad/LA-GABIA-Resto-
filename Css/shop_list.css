@@ -1,0 +1,352 @@
+/* Start variables */
+:root {
+  --main-back-color: #212121;
+  --main-color: #ffb344;
+  --text-color: #f6f6f6;
+  --paragraph-color: #99a799;
+  --hover-transition: 0.4s ease;
+  --padding-section: 40px;
+  --heading-color: #393e46;
+}
+/* End variables */
+
+/* Start Header */
+header {
+  height: 70vh;
+  width: 100%;
+  background-color: var(--main-back-color);
+  background-image: url("../Images/about-header-back.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+header .over-lay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+header .intro-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  user-select: none;
+  color: var(--text-color);
+  width: 100%;
+  user-select: none;
+}
+header .intro-text p {
+  color: var(--text-color);
+  text-align: center;
+  margin: 0;
+}
+header .intro-text p:first-of-type {
+  font-size: 45px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1.3;
+  margin-bottom: 8px;
+}
+header .intro-text p:last-of-type {
+  font-size: 30px;
+  font-weight: 300;
+}
+/* End Header */
+
+/* Start List */
+section.list {
+  padding: var(--padding-section) 0;
+  min-height: 100vh;
+}
+section.list .category {
+  display: flex;
+  flex-direction: column;
+  min-height: auto;
+  margin-bottom: 30px;
+  width: 100%;
+}
+section.list .category .food-slider {
+  margin-bottom: 30px;
+  height: 450px;
+  width: 100%;
+}
+section.list .category .food-slider .holder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+section.list .category .food-slider .specific-slider {
+  width: 400%;
+  height: 75%;
+  display: flex;
+  flex-direction: row;
+  transition: transform var(--hover-transition);
+}
+section.list .category .food-slider .specific-slider img {
+  width: 25%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+section.list .category .food-slider .select {
+  width: 80%;
+  margin: 0 auto;
+  height: 25%;
+}
+section.list .category .food-slider .select-holder {
+  width: 100%;
+  height: 100%;
+  margin-top: 5%;
+  overflow: hidden;
+}
+section.list .category .food-slider .select-slider {
+  width: 120%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  transition: transform var(--hover-transition);
+}
+section.list .category .food-slider .select-slider img {
+  width: 25%;
+  min-height: 100%;
+  object-fit: cover;
+  margin-right: 15px;
+  opacity: 0.7;
+}
+section.list .category .food-slider .select-slider img.active {
+  opacity: 1;
+}
+section.list .category .food-slider .select-slider img:last-of-type {
+  margin: 0;
+}
+section.list .category div.details h3 {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--heading-color);
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+section.list .category div.details .rating-prix {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+section.list .category div.details .rating-prix span.price {
+  position: relative;
+  font-size: 25px;
+  font-weight: 800;
+  color: var(--main-back-color);
+}
+section.list .category div.details .rating-prix span.price::after {
+  content: "$150";
+  position: absolute;
+  left: 110%;
+  top: 40%;
+  color: var(--paragraph-color);
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: line-through;
+}
+section.list .category div.details .rating-prix .rating i {
+  color: #ccc;
+  font-size: 15px;
+  margin: 5px 0;
+}
+section.list .category div.details > p {
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.7;
+  color: var(--paragraph-color);
+}
+section.list .category div.details .actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+section.list .category div.details .actions input {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ccc;
+  text-align: center;
+  font-size: 20px;
+}
+
+section.list .description {
+  margin-bottom: 30px;
+}
+section.list .description .header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+section.list .description .header h3 {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--heading-color);
+  text-transform: uppercase;
+  margin-right: 20px;
+}
+section.list .description .header span a {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--paragraph-color);
+  text-transform: uppercase;
+  transition: var(--hover-transition);
+}
+section.list .description .header span a:hover {
+  color: var(--main-back-color);
+}
+section.list .description .body {
+  padding: 15px 0;
+}
+section.list .description .body p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.7;
+  color: var(--paragraph-color);
+}
+section.list .description .body ul {
+  padding-left: 25px;
+}
+section.list .description .body ul li {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--heading-color);
+  padding: 5px 0;
+  position: relative;
+  line-height: 1.3;
+}
+section.list .description .body ul li::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f054";
+  color: var(--main-color);
+  margin-right: 5px;
+}
+
+section.list .more h3 {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--heading-color);
+  text-transform: uppercase;
+  margin: 0;
+  padding: 20px 0;
+}
+section.list .more .items {
+  display: flex;
+  flex-direction: column;
+}
+section.list .more .items .card {
+  width: 100%;
+  min-height: 250px;
+  margin-bottom: 30px;
+}
+section.list .more .items .card img {
+  width: 70%;
+  height: 300px;
+  margin: 15px 15%;
+  object-fit: cover;
+}
+section.list .more .items .card .info {
+  text-align: center;
+}
+section.list .more .items .card .info h3 {
+  margin: 0;
+  font-size: 27px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--heading-color);
+}
+section.list .more .items .card .info h3 a {
+  cursor: pointer;
+  transition: var(--hover-transition);
+}
+section.list .more .items .card .info h3 a:hover {
+  color: var(--main-color);
+}
+section.list .more .items .card .info .rating > i {
+  color: #ccc;
+  font-size: 15px;
+  margin: 5px 0;
+}
+section.list .more .items .card .info .price {
+  display: block;
+  margin: 7px 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+section.list .more .items .card .action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+section.list .more .items .card .action a {
+  color: var(--heading-color);
+  font-size: 17px;
+  cursor: pointer;
+  transition: var(--hover-transition);
+}
+section.list .more .items .card .action a:hover {
+  color: var(--main-color);
+}
+section.list .more .items .card .action a i {
+  margin-right: 7px;
+}
+section.shop .food > .action {
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 900px) {
+  section.list .category {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  section.list .category > div {
+    flex: 1;
+  }
+  section.list .category .food-slider {
+    margin: 0;
+    margin-right: 30px;
+  }
+  section.list .category .food-slider .select .specific-slider {
+    height: 80%;
+  }
+  section.list .more .items {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  section.list .more .items .card {
+    width: 20%;
+  }
+  section.list .more .items .card img {
+    width: 100%;
+    height: 200px;
+    margin: 0;
+  }
+}
+/* End List */
